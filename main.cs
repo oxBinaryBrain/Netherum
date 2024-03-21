@@ -25,3 +25,31 @@ class Program
             Gas = BigInteger.Parse("4700000")
         };
 
+        var deploymentHandler = await web3.Eth.GetContractDeploymentHandler<SimpleContractDeployment>();
+        var transactionReceipt = await deploymentHandler.SendRequestAndWaitForReceiptAsync(deployment);
+
+        // Get the deployed contract address
+        var contractAddress = transactionReceipt.ContractAddress;
+
+        // Load the deployed contract
+        var contract = web3.Eth.GetContract(ABI, contractAddress);
+
+        // Interact with the contract
+        var getValueFunction = contract.GetFunction("getValue");
+        var value = await getValueFunction.CallAsync<int>();
+
+        Console.WriteLine($"Initial value: {value}");
+
+        var setValueFunction = contract.GetFunction("setValue");
+        var setValueTransactionReceipt = await setValueFunction.SendTransactionAndWaitForReceiptAsync(account.Address, new BigInteger(42));
+
+        // Get the updated value
+        var updatedValue = await getValueFunction.CallAsync<int>();
+        Console.WriteLine($"Updated value: {updatedValue}");
+
+        Console.ReadLine();
+    }
+
+    // SimpleContract ABI (replace with your contract ABI)
+    private static readonly string ABI = @"[{'constant':true,'inputs':[],'name':'getValue','outputs':[{'name':'','type':'uint256'}],'payable':false,'stateMutability':'view','type':'function'},{'constant':false,'inputs':[{'name':'newValue','type':'uint256'}],'name':'setValue','outputs':[],'payable':false,'stateMutability':'nonpayable','type':'function'}]";
+}
