@@ -6,3 +6,8 @@ This project demonstrates a basic blockchain application developed using Nethere
 
 Follow these instructions to get a copy of the project up and running on your local machine.
 
+### Prerequisites
+
+- [.NET Core SDK](https://dotnet.microsoft.com/download) installed on your machine
+- Infura API key (for connecting to an Ethereum network)
+- Ethereum account private key
