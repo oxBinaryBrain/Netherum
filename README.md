@@ -11,3 +11,9 @@ Follow these instructions to get a copy of the project up and running on your lo
 - [.NET Core SDK](https://dotnet.microsoft.com/download) installed on your machine
 - Infura API key (for connecting to an Ethereum network)
 - Ethereum account private key
+### Installing
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/oxBinaryBrain/your-repository.git
