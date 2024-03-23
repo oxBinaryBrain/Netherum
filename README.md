@@ -17,3 +17,16 @@ Follow these instructions to get a copy of the project up and running on your lo
 
    ```bash
    git clone https://github.com/oxBinaryBrain/Netherum.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd nethereum-blockchain-application
+   ```
+3. Restore project dependencies:
+   ```bash
+   dotnet restore
+   ```
+4. Update the Program.cs file with your Infura API key and Ethereum account private key.
+   
+
+
