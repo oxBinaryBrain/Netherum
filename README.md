@@ -27,6 +27,13 @@ Follow these instructions to get a copy of the project up and running on your lo
    dotnet restore
    ```
 4. Update the Program.cs file with your Infura API key and Ethereum account private key.
-   
+
+ 
+### Usage
+
+Upon running the application, it will connect to the specified Ethereum network (e.g., Ropsten) using your Infura API key and deploy a simple smart contract. The contract stores and retrieves a single integer value. The application will interact with the contract by setting and getting the value.
+
+### Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 
