@@ -36,4 +36,10 @@ Upon running the application, it will connect to the specified Ethereum network 
 ### Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+### Acknowledgments
+Nethereum - for providing the .NET integration library for Ethereum
+Infura - for providing the Ethereum infrastructure and APIs
 
